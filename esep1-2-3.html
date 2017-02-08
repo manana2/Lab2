@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<!-- @author Fara -->
+<!--  
+  To change this license header, choose License Headers in Project Properties.
+  To change this template file, choose Tools | Templates
+  and open the template in the editor.
+ -->
+        <meta charset="UTF-8">
+        <title></title>
+
+    </head>
+    <body>
+      
+<script>
+    
+var array = [];           
+var random,sum = 0;          
+
+while (array.length <= 4) {
+    random = Math.floor(Math.random() * 50); 
+       array.push(random);         
+ }
+document.write("Array: ",array);
+
+var minimum = array[0];
+var maximum = array[0];
+for (var i = 0; i<array.length; i++){
+    if(minimum > array[i]){
+        minimum = array[i];
+    } else if(maximum < array[i]){
+        maximum = array[i] ;
+    }
+    if (array[i]%2==0){
+        sum += array[i];
+    }
+}
+document.write("<br>min: ",minimum,"<br>max: ",maximum,"<br>Even sum: ",sum);
+</script>
+
+    </body>
+</html>
